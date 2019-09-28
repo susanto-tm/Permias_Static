@@ -2,32 +2,37 @@
 <html class="no-js" lang="">
 
 <head>
-    <meta charset="utf-8">
-    <title>Permias Penn State</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<title>Permias Penn State</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="manifest" href="../site.webmanifest">
-    <!-- Place favicon.ico in the root directory -->
+	<link rel="manifest" href="../site.webmanifest">
+	<!-- Place favicon.ico in the root directory -->
 	<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
 
 	<!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/normalize.css">
+	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/common.css">
 	<link rel="stylesheet" href="../css/nav.css">
+	<link rel="stylesheet" href="../css/officers.css">
+
+	<!-- Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
     <!-- Add your site or application content here -->
 	<header id="nav" class="navbar">
 		<nav class="primary clearfix">
-			<h1><a href="/" id="permias-logo" class="logo hide-text">Logo</a></h1>
+			<h1><a href="../index.html" id="permias-logo" class="logo hide-text">Logo</a></h1>
 			<div class="menu">
-				<a href="#">Officers</a>
+				<a href="officers.html">Officers</a>
 				<a href="#">Gallery</a>
 				<a href="#">Events</a>
 				<a href="#">ICN</a>
@@ -39,65 +44,43 @@
 		</nav>
 	</header>
 
-	<article role="article" class="officers">
-		<section id="executive" class="executive_branch">
-			<div class="officer">
-				<div class="container">
-					<div class="officer_image"><img src="#" alt="Asril Duta Hariandy"/></div>
-					<div class="officer_name"><span>Asril Duta Hariandy</span></div>
-					<div class="officer_rank"><span>President</span></div>
-					<div class="officer_desc"><p></p></div>
+	<article role="article">
+		<section id="officer-banner" class="hero-banner clearfix">
+			<div class="banner-container">
+				<div class="officer-header">
+					<h1 class="main-header">Officers of PERMIAS</h1>
 				</div>
+				<div class="officers-all"></div>
 			</div>
 
-			<div class="officer">
-				<div class="container">
-					<div class="officer_image"><img src="#" alt="Farras Irsyaad Rivai"/></div>
-					<div class="officer_name"><span>Farras Irsyaad Rivaio</span></div>
-					<div class="officer_rank"><span>Vice President</span></div>
-					<div class="officer_desc"><p></p></div>
-				</div>
+		</section>
+		<section id="executive" class="executive_branch officer-branch clearfix">
+			<div class="branch-header"><h1>Executive Branch</h1></div>
+			<div class="officer-container">
+				<div id="executive-officers"></div>
 			</div>
 		</section>
-
-		<section id="secondary" class="secondary_branch">
-			<div class="officer">
-				<div class="container">
-					<div class="officer_image"><img src="#" alt="Meddelin Trinita Setiawan"/></div>
-					<div class="officer_name"><span>Meddelin Trinita Setiawan</span></div>
-					<div class="officer_rank"><span>Secretary</span></div>
-					<div class="officer_desc"><p></p></div>
-				</div>
-			</div>
-			<div class="officer">
-				<div class="container">
-					<div class="officer_image"><img src="#" alt="Prawira Pikanto"/></div>
-					<div class="officer_name"><span>Prawira Pikanto</span></div>
-					<div class="officer_rank"><span>Treasure</span></div>
-					<div class="officer_desc"><p></p></div>
-				</div>
-			</div>
-			<div class="officer">
-				<div class="container">
-					<div class="officer_image"><img src="#" alt="Victor Suhendra"/></div>
-					<div class="officer_name"><span>Victor Suhendra</span></div>
-					<div class="officer_rank"><span>Public Relations</span></div>
-					<div class="officer_desc"><p></p></div>
-				</div>
-			</div>
-			<div class="officer">
-				<div class="container">
-					<div class="officer_image"><img src="#" alt="Timothy Alexander"/></div>
-					<div class="officer_name"><span>Timothy Alexander</span></div>
-					<div class="officer_rank"><span>Webmaster</span></div>
-					<div class="officer_desc"><p></p></div>
-				</div>
+		<section id="secondary" class="secondary_branch officer-branch clearfix">
+			<div class="branch-header"><h1>Secondary Branch</h1></div>
+			<div class="officer-container">
+				<div id="secondary-officers"></div>
 			</div>
 		</section>
-
-
 	</article>
 
+
+
+	<!-- Templates -->
+	<template id="officer_display">
+		<div class="officer">
+			<div class="container">
+				<div class="officer_image"><img src="#" alt=""/></div>
+				<div class="officer_name"><span class="name_container"></span></div>
+				<div class="officer_rank"><span class="rank_container"></span></div>
+				<div class="officer_desc"><p class="desc_container"></p></div>
+			</div>
+		</div>
+	</template>
 
     <!-- Scripts and Javascript -->
     <script src="../js/vendor/modernizr-3.7.1.min.js"></script>
