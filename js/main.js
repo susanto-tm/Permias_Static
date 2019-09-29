@@ -46,7 +46,7 @@ function scrollFunction() {
 ----------------------------------------------------------------------------
 Templates for Officer Members
 
-Method: Create template in the html file and use importNode function to
+Method: Create template in the html file and use cloneNode function to
 		add a list of titles and descriptions into its respective id's in
 		main HTML code
 

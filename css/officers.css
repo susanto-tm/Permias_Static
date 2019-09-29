@@ -67,17 +67,9 @@ section.officer-branch .officer-container {
 	position: relative;
 }
 
-section.officer-branch .officer-container #executive-officers {
-	max-width: 1360px;
+section.officer-branch .officer {
+	box-sizing: border-box;
 	margin: 0 auto;
-	height: 100%;
-}
-
-section.officer-branch .officer-container #executive-officers div.officer {
-	width: 50%;
-	display: inline-block;
-	float: left;
-	height: 100%;
 }
 
 section.officer-branch .officer .container {
@@ -102,11 +94,56 @@ section.officer-branch .officer .officer_rank {
 	color: #040040;
 	text-transform: uppercase;
 	position: relative;
+	width: fit-content;
+	margin: 0 auto;
 }
 
-section.officer-branch .officer .officer_rank span.rank_container::after {
+section.officer-branch .officer .officer_rank span.rank_container:after {
 	content: "";
 	position: absolute;
-	height: 2px;
+	height: 4px;
 	background-color: #040040;
+	left: 50%;
+	bottom: -5px;
+	width: 50%;
+	transform: translate(-50%);
+}
+
+/*
+-----------------------------------------------------------------------------------
+Executive Officers
+-----------------------------------------------------------------------------------
+ */
+
+section.officer-branch .officer-container #executive-officers {
+	max-width: 1360px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+section.officer-branch .officer-container #executive-officers div.officer {
+	width: 50%;
+	display: inline-block;
+	float: left;
+	height: 100%;
+	padding: 0 20px;
+}
+
+/*
+-----------------------------------------------------------------------------------
+Secondary Officers
+-----------------------------------------------------------------------------------
+ */
+
+section.officer-branch .officer-container #secondary-officers {
+	max-width: 1360px;
+	margin: 0 auto;
+	height: 100%;
+}
+
+section.officer-branch .officer-container #secondary-officers div.officer {
+	width: 25%;
+	display: inline-block;
+	float: left;
+	height: 100%;
 }
