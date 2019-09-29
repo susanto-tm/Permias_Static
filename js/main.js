@@ -18,7 +18,7 @@ function scrollFunction() {
 		$("div.menu").addClass('menu-right');
 		$("div.menu a").addClass('menu-item');
 
-		$('article div.officer-header').addClass("header-scroll");
+		$('article div.large-header').addClass("header-scroll");
 
 		// while (nav_height > 100) {
 		// 	nav_primary.height(nav_height - 2);
@@ -33,7 +33,7 @@ function scrollFunction() {
 		$("nav h1").removeClass('scroll-h1');
 		$("div.menu").removeClass('menu-right');
 		$("div.menu a").removeClass('menu-item');
-		$("article div.officer-header").removeClass('header-scroll');
+		//$("article div.officer-header").removeClass('header-scroll');
 
 		// while (nav_height < 420) {
 		// 	nav_primary.height(nav_height + 2);

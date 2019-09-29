@@ -18,3 +18,48 @@ body {
 .clearfix:after {
     clear: both;
 }
+
+section#hero-banner {
+	z-index: 1;
+	height: 400px;
+	padding: 204px 0;
+	background-color: #000000;
+	position: relative;
+	margin-top: 150px;
+}
+
+section#hero-banner .banner-container {
+	width: 100%;
+	height: 100%;
+}
+
+section#hero-banner .large-header {
+	text-align: center;
+	width: 100%;
+	font-family: "Lato", sans-serif;
+	letter-spacing: 0.025em;
+	font-weight: 700;
+	font-size: 55px;
+	z-index: 90;
+	color: transparent;
+	position: absolute;
+}
+
+section#hero-banner .banner-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	background-position-x: center;
+}
+
+.header-scroll {
+	color: #FFFFFF !important;
+	-webkit-transition: color 0.2s ease;
+	-moz-transition: color 0.2s ease;
+	-ms-transition: color 0.2s ease;
+	-o-transition: color 0.2s ease;
+	transition: color 0.2s ease;
+}

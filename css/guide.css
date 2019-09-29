@@ -1,0 +1,77 @@
+section#hero-banner .banner-container .guide-img {
+	background: url("../img/officers/officers.jpeg") no-repeat;
+	background-position-x: center;
+}
+
+section.guide h1, section.guide h2, section.guide h3 {
+	font-family: "Lato", sans-serif;
+	font-weight: 700;
+	color: #000000;
+}
+
+section.guide p {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	color: #000000;
+	line-height: 30px;
+}
+
+section.guide li {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 400;
+	color: #000000;
+	margin-bottom: 5px;
+}
+
+section.guide {
+	max-width: 1360px;
+	margin: 0 auto;
+	padding-top: 50px;
+}
+
+section.guide .guide-container {
+	width: 100%;
+	height: 100%;
+}
+
+section#getting-to-psu {
+	height: 600px;
+	text-align: center;
+	position: relative;
+	display: block;
+}
+
+div.sbs-info {
+	width: 50%;
+	height: 100%;
+	float: left;
+	box-sizing: border-box;
+	display: inline-block;
+	text-align: left;
+	padding: 0 5px;
+}
+
+div#sce ul {
+	text-align: left;
+	padding: 0;
+	margin-top: 10px;
+}
+
+div#sce ul li:not(.no-bullet):not(.no_bullet) {
+	list-style-type: none;
+	margin-left: 0;
+	padding-left: 1rem;
+}
+
+div#sce ul li:before {
+	content: "\002022";
+	float: left;
+	font-size: 1rem;
+	margin-left: -.875rem;
+}
+
+div.sbs-info p a {
+	text-decoration: none;
+	color: #040040;
+	font-weight: 700;
+}
