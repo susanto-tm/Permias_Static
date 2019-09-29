@@ -3,6 +3,11 @@ section#hero-banner .banner-container .guide-img {
 	background-position-x: center;
 }
 
+section.guide {
+	width: 100%;
+	padding-top: 50px;
+}
+
 section.guide h1, section.guide h2, section.guide h3 {
 	font-family: "Lato", sans-serif;
 	font-weight: 700;
@@ -16,6 +21,12 @@ section.guide p {
 	line-height: 30px;
 }
 
+section.guide p a {
+	text-decoration: none;
+	color: #040040;
+	font-weight: 700;
+}
+
 section.guide li {
 	font-family: "Montserrat", sans-serif;
 	font-weight: 400;
@@ -23,11 +34,6 @@ section.guide li {
 	margin-bottom: 5px;
 }
 
-section.guide {
-	max-width: 1360px;
-	margin: 0 auto;
-	padding-top: 50px;
-}
 
 section.guide .guide-container {
 	width: 100%;
@@ -39,11 +45,12 @@ section#getting-to-psu {
 	text-align: center;
 	position: relative;
 	display: block;
+	max-width: 1360px;
+	margin: 0 auto;
 }
 
 div.sbs-info {
 	width: 50%;
-	height: 100%;
 	float: left;
 	box-sizing: border-box;
 	display: inline-block;
@@ -70,8 +77,102 @@ div#sce ul li:before {
 	margin-left: -.875rem;
 }
 
-div.sbs-info p a {
-	text-decoration: none;
-	color: #040040;
-	font-weight: 700;
+section#get-around-campus {
+	height: 490px;
+	display: block;
+	background-color: #fafafa;
+	margin-top: 10px;
+}
+
+section#get-around-campus .subsection-gac-container {
+	max-width: 1260px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+section#get-around-campus .gac-article {
+	padding: 50px 100px 0;
+}
+
+section#where-to-live {
+	height: 1020px;
+	display: block;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+}
+
+section#where-to-live .subsection-wtl-container {
+	max-width: 1360px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+section#where-to-live .live-desc {
+	height: 12%;
+}
+
+section#where-to-live .hall-rows {
+	height: calc(100% - 23%);
+}
+
+section#where-to-live .hall-container {
+	height: 100%;
+}
+
+section#where-to-live .two-line {
+	height: 50%;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+section#where-to-live .grid {
+	width: 100%;
+	height: 100%;
+}
+
+section#where-to-live .grid.divide-three {
+	width: calc(100% / 3);
+	display: inline-block;
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+	float: left;
+}
+
+section#where-to-live .grid.divide-two {
+	width: calc(100% / 2);
+	display: inline-block;
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0 auto;
+	padding: 0 10px;
+	float: left;
+}
+
+section#where-to-live .grid .grid-element {
+	width: 100%;
+	height: 100%;
+}
+
+section#where-to-live .grid .grid-element h2 {
+	text-align: center;
+}
+
+section#other-info {
+	height: 450px;
+	background-color: #fafafa;
+	display: block;
+	margin-top: 10px;
+}
+
+section#other-info .subsection-oi-container {
+	max-width: 1260px;
+	height: 100%;
+	margin: 0 auto;
+}
+
+section#other-info .oi-article {
+	padding: 50px 100px 0;
 }
