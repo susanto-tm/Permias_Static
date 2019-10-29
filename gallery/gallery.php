@@ -44,12 +44,14 @@
 
 <article style="margin-top: 110px; height: 100%;">
 	<?php
-		$count = 1;
 		foreach(glob("../img/gallery/*") as $dir) {
-			$class_name = "gallery".$count;
-			echo "<div class='$class_name'>";
+			$dir_name = basename($dir);
+			$count = 1;
+			echo "<div class='$dir_name'>";
 			foreach (glob($dir."./*.{jpg,jpeg,png}", GLOB_BRACE) as $img) {
-				echo "<img src='$img' alt='$class_name'/>";
+				$alt_val = "img".$count;
+				echo "<img src='$img' alt='$alt_val'/>";
+				$count++;
 			}
 			echo "</div>\n";
 			$count++;
