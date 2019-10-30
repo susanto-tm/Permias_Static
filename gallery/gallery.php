@@ -18,8 +18,9 @@
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/common.css">
 	<link rel="stylesheet" href="../css/nav.css">
-	<link rel="stylesheet" href="../css/gallery.css">
 	<link rel="stylesheet" href="../css/lightslider.css">
+	<link rel="stylesheet" href="../css/gallery.css">
+	
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700&display=swap" rel="stylesheet">
 
@@ -64,15 +65,15 @@
 				$title = implode(" ", $dir_name);
 				echo "<h1 class='$dir_name[0]'>".$title."</h1>\n";
 				echo "<ul id='lightSlider' class='$dir_name[0]'>";
-					foreach(glob("../img/gallery/thumb/".basename($event)."/*.{jpg,png,jpeg}", GLOB_BRACE) as $thumb) {
-						$img = $event."/".basename($thumb);
-						$alt = $dir_name[0]."_".$count;
-						echo "<li data-thumb='$thumb'>";
-						echo "<img src='$img' alt='$alt' style='width: 100%;'/>";
-						echo "</li>\n";
-						$count++;
-					}
-					echo "</ul>\n";
+				foreach(glob($event."/thumb/*.{jpg,png,jpeg}", GLOB_BRACE) as $thumb) {
+					$img = $event."/".basename($thumb);
+					$alt = $dir_name[0]."_".$count;
+					echo "<li data-thumb='$thumb'>";
+					echo "<img src='$img' alt='$alt' style='width: 100%;'/>";
+					echo "</li>\n";
+					$count++;
+				}
+				echo "</ul>\n";
 				}
 			?>
 	</section>
