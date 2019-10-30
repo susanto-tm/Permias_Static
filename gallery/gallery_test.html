@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery Test</title>
+	<link rel="stylesheet" type="text/css" href="../css/lightslider.css">
+	<style type="text/css">
+		.gallery {
+			width: 420px;
+		}
+		ul {
+			list-style: none outside none;
+			padding-left: 0;
+			margin-bottom: 0;
+		}
+		li {
+			display: block;
+			float: left;
+			margin-right: 6px;
+			cursor: pointer;
+		}
+		img {
+			display: block;
+			height: auto;
+			max-width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class="gallery">
+		<ul id="lightSlider">
+			<li data-thumb="../img/nav/permias_logo_full.png">
+				<img src="../img/nav/permias_logo_full.png" alt="Permias"/>
+			</li>
+		</ul>
+	</div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="../js/lightslider.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    $("#lightSlider").lightSlider({
+				gallery: true,
+				item: 1,
+				loop: true,
+				slideMargin: 0,
+				thumbItem: 9
+			});
+		    
+		    
+		});
+	</script>
+
+</body>
+</html>

@@ -77,6 +77,23 @@ for (var i = 0; i < officers.length; i++) {
 	else {
 		secondary_display.appendChild(tmpl);
 	}
-
-
 }
+
+/*
+----------------------------------------------------------------------------
+LightSlider Gallery
+
+Output: Image gallery with a slider and thumbnails. Thumbnails to be gotten
+from thumbnail folder with corresponding event name in the events folder.
+Images are organized by the same name and handled by the php in gallery.php.
+
+----------------------------------------------------------------------------
+ */
+$("#lightSlider").lightSlider({
+	gallery: true,
+	item: 1,
+	loop: true,
+	slideMargin: 0,
+	thumbItem: 9
+});
+

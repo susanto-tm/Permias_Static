@@ -18,7 +18,8 @@
 	<link rel="stylesheet" href="../css/main.css">
 	<link rel="stylesheet" href="../css/common.css">
 	<link rel="stylesheet" href="../css/nav.css">
-
+	<link rel="stylesheet" href="../css/gallery.css">
+	<link rel="stylesheet" href="../css/lightslider.css">
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700&display=swap" rel="stylesheet">
 
@@ -42,21 +43,39 @@
 	</nav>
 </header>
 
-<article style="margin-top: 110px; height: 100%;">
-	<?php
-		foreach(glob("../img/gallery/*") as $dir) {
-			$dir_name = basename($dir);
-			$count = 1;
-			echo "<div class='$dir_name'>";
-			foreach (glob($dir."./*.{jpg,jpeg,png}", GLOB_BRACE) as $img) {
-				$alt_val = "img".$count;
-				echo "<img src='$img' alt='$alt_val'/>";
-				$count++;
-			}
-			echo "</div>\n";
-			$count++;
-		}
-	?>
+<article>
+	<section id="hero-banner" class="clearfix">
+		<div class="banner-container">
+			<div class="large-header">
+				<h1 class="main-header">PERMIAS Gallery</h1>
+			</div>
+			<div class="banner-image entry-banner"></div>
+		</div>
+	
+	</section>
+	<section class="gallery">
+		<!-- For every events directory, there is a corresponding directory with the same name in the thumb directory.
+			 Get the images in the thumb directory first then search the image with the same name in events. Then format
+			 them in the way the lightSlider would process -->
+		<?php
+			foreach(glob("../img/gallery/events/*") as $event) {
+				$dir_name = explode("_", basename($event));
+				$count = 1;
+				$title = implode(" ", $dir_name);
+				echo "<h1 class='$dir_name[0]'>".$title."</h1>\n";
+				echo "<ul id='lightSlider' class='$dir_name[0]'>";
+					foreach(glob("../img/gallery/thumb/".basename($event)."/*.{jpg,png,jpeg}", GLOB_BRACE) as $thumb) {
+						$img = $event."/".basename($thumb);
+						$alt = $dir_name[0]."_".$count;
+						echo "<li data-thumb='$thumb'>";
+						echo "<img src='$img' alt='$alt' style='width: 100%;'/>";
+						echo "</li>\n";
+						$count++;
+					}
+					echo "</ul>\n";
+				}
+			?>
+	</section>
 </article>
 
 <!-- Scripts and Javascript -->
@@ -64,7 +83,19 @@
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!--<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>-->
 <script src="../js/plugins.js"></script>
+<script src="../js/lightslider.js"></script>
 <script src="../js/main.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#lightSlider").lightSlider({
+            gallery: true,
+            item: 1,
+            loop: true,
+            slideMargin: 0,
+            thumbItem: 9
+        });
+    })
+</script>
 
 <!-- Google Analytics: change UA-XXXXX-Y to be your site' s ID. -->
 <script>

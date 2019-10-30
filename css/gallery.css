@@ -1,0 +1,24 @@
+section#hero-banner .banner-container .entry-banner {
+	background: url("../img/hero-banner/old-main.jpg") no-repeat 20% center;
+	background-size: 100%;
+}
+
+section.gallery {
+	width: 500px;
+}
+.gallery ul {
+	list-style: none outside none;
+	padding-left: 0;
+	margin-bottom: 0;
+}
+.gallery li {
+	display: block;
+	float: left;
+	margin-right: 6px;
+	cursor: pointer;
+}
+.gallery img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
