@@ -4,8 +4,9 @@ section#hero-banner .banner-container .entry-banner {
 }
 
 section.gallery {
-	width: 500px;
+	width: 913px;
 	margin: 0 auto;
+	height: 800px;
 }
 .gallery ul {
 	list-style: none outside none;
@@ -22,4 +23,8 @@ section.gallery {
 	display: block;
 	height: auto;
 	max-width: 100%;
+}
+
+.gallery .lSPager.lSGallery li a img {
+	width: 100%;
 }
